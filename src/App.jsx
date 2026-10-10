@@ -55,7 +55,6 @@ function App() {
   };
 
   return <>
-    <div className="demo-note"><span className="demo-dot" /> Marca y propiedades de muestra</div>
     <header className="site-header">
       <Brand />
       <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>

@@ -36,24 +36,6 @@ button, a {
 a {
   color: inherit;
 }
-.demo-note {
-  display: flex;
-  min-height: 28px;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: var(--forest-deep);
-  color: #e9ede7;
-  font-size: 8px;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-}
-.demo-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #d5b38d;
-}
 .site-header {
   position: sticky;
   z-index: 20;
