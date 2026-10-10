@@ -1,19 +1,25 @@
 # Umbral Inmobiliaria
 
-Landing ficticia para una inmobiliaria, creada como proyecto de portfolio con React y Vite.
+Sitio web para una inmobiliaria con catálogo de propiedades filtrable, navegación adaptable a dispositivos móviles y formulario de contacto.
 
-## Desarrollo
+## Tecnologías
+
+- React
+- Vite
+- CSS
+
+## Desarrollo local
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-## Producción
+## Build de producción
 
 ```bash
 pnpm build
 pnpm preview
 ```
 
-La marca, propiedades y valores son ilustrativos. El formulario es una demostración y no envía información.
+El formulario necesita conectarse a un servicio de envío para recibir consultas.
