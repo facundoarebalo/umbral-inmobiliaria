@@ -716,10 +716,6 @@ a {
 }
 
 @media (min-width: 581px) {
-  .demo-note {
-    font-size: 10px;
-    letter-spacing: .09em;
-  }
   .hero {
     min-height: 600px;
     align-items: center;
