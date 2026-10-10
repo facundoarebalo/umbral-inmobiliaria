@@ -55,7 +55,7 @@ function App() {
   };
 
   return <>
-    <div className="demo-note"><span className="demo-dot" /> Concepto de portfolio · Marca y propiedades de muestra</div>
+    <div className="demo-note"><span className="demo-dot" /> Marca y propiedades de muestra</div>
     <header className="site-header">
       <Brand />
       <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={menuOpen} aria-controls="main-nav" onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button>
@@ -101,7 +101,7 @@ function App() {
         </form>
       </section>
     </main>
-    <footer className="site-footer"><Brand footer /><p>Encontrar un lugar es encontrar una posibilidad.</p><span className="footer-legal">Concepto de portfolio · Propiedades ficticias</span></footer>
+    <footer className="site-footer"><Brand footer /><p>Encontrar un lugar es encontrar una posibilidad.</p><span className="footer-legal">Propiedades ficticias</span></footer>
   </>;
 }
 
