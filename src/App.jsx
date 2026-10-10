@@ -2,11 +2,13 @@ import { useMemo, useState } from 'react';
 import './styles.css';
 
 const properties = [
-  { id: '014', operation: 'venta', type: 'casa', location: 'Zona norte · Barrio Parque', search: 'zona norte barrio parque', name: 'Casa de patio y galería', beds: 3, baths: 2, area: 180, price: 'USD 185.000', image: 'photo-1600585154340-be6161a56a0c', alt: 'Casa contemporánea con jardín y fachada clara' },
-  { id: '022', operation: 'venta', type: 'departamento', location: 'Centro · Barrio Centro', search: 'centro barrio centro', name: 'Departamento con luz', beds: 2, baths: 1, area: 84, price: 'USD 129.000', image: 'photo-1600607687939-ce8a6c25118c', alt: 'Interior luminoso de un departamento moderno' },
-  { id: '031', operation: 'alquiler', type: 'casa', location: 'Las Acacias · Zona sur', search: 'las acacias zona sur', name: 'Casa entre árboles', beds: 3, baths: 2, area: 210, price: 'USD 1.100', image: 'photo-1600566753086-00f18fb6b3ea', alt: 'Living amplio conectado con un jardín' },
-  { id: '037', operation: 'venta', type: 'ph', location: 'Distrito sur · Barrio Jardín', search: 'distrito sur barrio jardin', name: 'PH renovado con terraza', beds: 2, baths: 1, area: 96, price: 'USD 98.000', image: 'photo-1600607687920-4e2a09cf159d', alt: 'Espacio interior renovado con materiales naturales' },
+  { id: '014', operation: 'venta', type: 'casa', location: 'Yerba Buena · Tucumán', name: 'Casa de patio y galería', beds: 3, baths: 2, area: 180, price: 'USD 185.000', image: 'photo-1600585154340-be6161a56a0c', alt: 'Casa contemporánea con jardín y fachada clara' },
+  { id: '022', operation: 'venta', type: 'departamento', location: 'Barrio Norte · San Miguel de Tucumán', name: 'Departamento con luz', beds: 2, baths: 1, area: 84, price: 'USD 129.000', image: 'photo-1600607687939-ce8a6c25118c', alt: 'Interior luminoso de un departamento moderno' },
+  { id: '031', operation: 'alquiler', type: 'casa', location: 'Tafí Viejo · Tucumán', name: 'Casa entre árboles', beds: 3, baths: 2, area: 210, price: 'USD 1.100', image: 'photo-1600566753086-00f18fb6b3ea', alt: 'Living amplio conectado con un jardín' },
+  { id: '037', operation: 'venta', type: 'ph', location: 'Lomas de Tafí · Tafí Viejo', name: 'PH renovado con terraza', beds: 2, baths: 1, area: 96, price: 'USD 98.000', image: 'photo-1600607687920-4e2a09cf159d', alt: 'Espacio interior renovado con materiales naturales' },
 ];
+
+const normalizeText = (value) => value.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
 function Brand({ footer = false }) {
   return <a className={`brand${footer ? ' brand-footer' : ''}`} href="#inicio" aria-label={footer ? 'Volver al inicio' : 'Umbral Inmobiliaria, inicio'}>
@@ -39,7 +41,7 @@ function App() {
   const filteredProperties = useMemo(() => properties.filter((property) =>
     (!filters.operation || property.operation === filters.operation)
       && (!filters.type || property.type === filters.type)
-      && (!filters.location || property.search.includes(filters.location.trim().toLocaleLowerCase('es')))), [filters]);
+      && (!filters.location || normalizeText(property.location).includes(normalizeText(filters.location.trim())))), [filters]);
   const feedback = filteredProperties.length === properties.length
     ? 'Mostrando todas las propiedades de muestra.'
     : `${filteredProperties.length} ${filteredProperties.length === 1 ? 'propiedad encontrada.' : 'propiedades encontradas.'}`;
