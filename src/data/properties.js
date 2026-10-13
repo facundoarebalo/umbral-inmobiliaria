@@ -1,0 +1,6 @@
+export const propiedades = [
+  { identificador: '014', operacion: 'venta', tipo: 'casa', ubicacion: 'Yerba Buena · Tucumán', nombre: 'Casa de patio y galería', dormitorios: 3, banos: 2, superficie: 180, precio: 'USD 185.000', imagen: 'photo-1600585154340-be6161a56a0c', descripcionImagen: 'Casa contemporánea con jardín y fachada clara' },
+  { identificador: '022', operacion: 'venta', tipo: 'departamento', ubicacion: 'Barrio Norte · San Miguel de Tucumán', nombre: 'Departamento con luz', dormitorios: 2, banos: 1, superficie: 84, precio: 'USD 129.000', imagen: 'photo-1600607687939-ce8a6c25118c', descripcionImagen: 'Interior luminoso de un departamento moderno' },
+  { identificador: '031', operacion: 'alquiler', tipo: 'casa', ubicacion: 'Tafí Viejo · Tucumán', nombre: 'Casa entre árboles', dormitorios: 3, banos: 2, superficie: 210, precio: 'USD 1.100', imagen: 'photo-1600566753086-00f18fb6b3ea', descripcionImagen: 'Living amplio conectado con un jardín' },
+  { identificador: '037', operacion: 'venta', tipo: 'ph', ubicacion: 'Lomas de Tafí · Tafí Viejo', nombre: 'PH renovado con terraza', dormitorios: 2, banos: 1, superficie: 96, precio: 'USD 98.000', imagen: 'photo-1600607687920-4e2a09cf159d', descripcionImagen: 'Espacio interior renovado con materiales naturales' },
+];
